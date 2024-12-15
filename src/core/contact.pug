@@ -1,0 +1,14 @@
+doctype html
+html
+    include ../components/navbar/navbar
+    include ../components/form/form
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title= data.site.title
+        link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap' rel='stylesheet')
+        link(rel="stylesheet" href="../styles.css")
+    body
+        +navbar(data)
+        +form(data)
+        script(src="./bundle.js")

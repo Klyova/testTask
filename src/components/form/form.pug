@@ -1,0 +1,28 @@
+include ../blockquote/blockquote
+
+mixin form(data)
+    .form
+        +blockquote(data.contact.blockquote, data.contact.cite )
+        .form__container
+            .form__picture
+            form.form__body(action='#' method='POST')
+                h1.form__title= data.form.title
+                .form__field
+                    .form__field-bordered
+                        label.form__label(for='emailaddress')= data.form.email
+                        input.form__input#emailaddress(type='email' name='email' required)
+                    .error-block#error-emailaddress(style='color: red; display: none;')
+                .form__field
+                    .form__field-bordered
+                        label.form__label(for='password')= data.form.password
+                        input.form__input#password(type='password' name='password' required)
+                    .error-block#error-password(style='color: red; display: none;')
+
+                .form__field
+                    .form__field-bordered
+                        label.form__label(for='confirmpass')= data.form.confirmpass
+                        input.form__input#confirmpass(type='password' name='confirmpass' required)
+                    .form__error-block#error-confirmpass(style='color: red; display: none;')
+                .form__actions
+                    button.form__button(type='button')= data.form.button
+        .form__email-display#form__email-display

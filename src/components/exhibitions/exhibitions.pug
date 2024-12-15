@@ -1,0 +1,15 @@
+include ../blockquote/blockquote
+
+mixin exhibitions(data)
+    .exhibitions
+        .exhibitions__container
+            h1.exhibitions__title= data.exhibitions.title
+            +blockquote(data.exhibitions.blockquote, data.exhibitions.cite )
+            .exhibitions__content
+                each item in data.exhibitions.exhibitionsCarts
+                    .exhibitions__cart
+                        .exhibitions__cart-image
+                            img(src= item.image, alt='')
+                        .exhibitions__cart-title= item.titleCard
+                        .exhibitions__cart-data= item.data
+                        .exhibitions__cart-text= item.text

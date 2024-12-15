@@ -1,0 +1,13 @@
+mixin slider(data)
+    .main-slider
+        .main-slider__wrp.swiper-wrapper
+            each post in data.posts
+                .main-slider__item.swiper-slide
+                    .main-slider__img
+                        img(src= post.image, alt='')
+                    .main-slider__content
+                        span.main-slider__sub-title= post.date
+                        .main-slider__title= post.title
+                        .main-slider__text= post.text
+                        a.main-slider__button(href=post.link target="_blank") Детальніше
+        .main-slider__pagination

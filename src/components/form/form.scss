@@ -1,0 +1,142 @@
+.form {
+  margin: 82px auto 0;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+    background: url('../img/2.jpg') no-repeat center/cover;
+    color: var(--main-color);
+    transform-origin: center right;
+    position: relative;
+    width: 50%;
+    height: 36svh;
+    animation: none;
+    transition: background-size 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      background-size: 110%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__body {
+    width: 50%;
+    padding: 24px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    color: var(--color-form-title);
+    font-weight: 800;
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+  &__field {
+    margin-bottom: 24px;
+  }
+  input[type='email'],
+  input[type='password'] {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    &.first {
+      margin-top: 0;
+    }
+    &:-webkit-autofill, &:-moz-autofill, &:-ms-input-placeholder {
+      background-color: unset!important;
+    }
+  }
+  &__button[type='button'] {
+    padding: 10px 40px;
+    border: 2px solid var(--color-form-input);
+    background: var(--main-color);
+    color: var(--color-form-input);
+    transition: 0.15s ease-in-out;
+    border-radius: 5px;
+    outline: none;
+    margin: 16px 0 0 0;
+    font-size: 16px;
+    &:hover {
+      background: var(--color-form-input);
+      color: var(--main-color);
+    }
+  }
+
+  &__error-block {
+    display: none;
+    color: var(--color-form-error);
+  }
+
+  &__field-bordered {
+    width: 100%;
+    position: relative;
+    &.active {
+      label {
+        top: 0;
+        left: 0;
+        transform: translate(-0, -50%) scale(0.75);
+        color: var(--color-form-input);
+      }
+      &:after {
+        width: 100%;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background: var(--color-form-input);
+      position: absolute;
+      bottom: 0;
+      transition: 0.15s ease-in-out;
+    }
+
+    label {
+      color: var(--color-form-label);
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-0, -50%);
+      transition: 0.15s ease-in-out;
+      cursor: text;
+      transform-origin: center left;
+    }
+  }
+
+  #form__email-display {
+    width: 90%;
+    height: calc(100svh - 300px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-size: 32px;
+    font-weight: 800;
+    background: url(../img/1.jpg) no-repeat center / cover;
+    margin: auto;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,13 @@
+mixin navbar(data)
+    nav.navbar
+        .navbar__container
+            input.navbar__input(type='checkbox' name='' id='')
+            .navbar__hamburger-lines
+                span.line.line1
+                span.line.line2
+                span.line.line3
+            a.navbar__logo(href='/') Logo
+            ul.navbar__menu-items
+                each item in data.menuItemNav
+                    li
+                        a(href=item.link)=item.name

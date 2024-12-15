@@ -1,0 +1,43 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: var(--background-color-body);
+  color: var(--text-color-body);
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color-body: #fff;
+  --text-color-body: #4e4a67;
+
+  --main-color: #fff;
+
+  --main-color-header-hover: #203a73;
+  --background-color-header: #1d4b8f;
+
+  --background-color-slider-gradient: linear-gradient(147deg, #203a73 0%, #3466af 50%, #f7d96b 110%);
+  --background-color-slider-box-shadow: 4px 13px 30px 1px rgba(32, 58, 115, 0.4);
+  --background-color-slider-pagination: #203a73;
+  --color-slider-sub-title: #7b7992;
+  --color-slider-title: #0d0925;
+  --color-slider-text: #4e4a67;
+
+  --background-color-about: #f7d96b;
+
+  --color-exhibitions-title: #203a73;
+  --background-color-exhibitions-gradient: linear-gradient(147deg, #203a73 0%, #3466af 50%, #fff 110%);
+  --color-exhibitions: var(--color-slider-title);
+  --color-exhibitions-sub-title: #f8f8f8;
+
+  --color-form-title: var(--color-slider-title);
+  --color-form-input: var(--color-exhibitions-title);
+  --color-form-label:  #444;
+  --color-form-error: #f80202
+}

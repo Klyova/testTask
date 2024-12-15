@@ -1,0 +1,15 @@
+include ../about/about
+include ../slider/slider
+include ../products/products
+include ../blockquote/blockquote
+
+mixin main(data)
+    .main__container
+        .main__section
+            +slider(data)
+        .main__section.main__section-about
+            +about(data)
+        .main__section.main__section-picture
+            +products(data)
+        .main__section
+            +blockquote(data.main.blockquote, data.main.cite )

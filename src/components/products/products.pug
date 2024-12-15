@@ -1,0 +1,10 @@
+mixin products(data)
+    .products-slider
+        h1.products-slider__title= data.products.title
+        .products-slider__container.swiper-wrapper
+            each item in data.products.productsCards
+                .swiper-slide
+                    .c-card
+                        figure.c-card__figure
+                            img(src= item.image)
+                            figcaption= item.titleCard

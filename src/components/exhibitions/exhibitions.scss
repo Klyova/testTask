@@ -1,0 +1,83 @@
+.exhibitions {
+  &__container {
+    max-width: 100%;
+    margin: 72px auto;
+    width: 100%;
+    line-height: 0;
+    overflow: visible;
+    @media screen and (max-width: 768px) {
+      margin: 82px auto;
+    }
+  }
+
+  &__title {
+    width: 90%;
+    margin: auto;
+    padding: 16px 0;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--color-exhibitions-title);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 16px;
+    width: 90%;
+    margin: auto;
+  }
+
+  &__cart {
+    padding: 8px;
+    background: var(--background-color-exhibitions-gradient);
+    opacity: 0;
+    &-image {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      position: relative;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+        animation: none;
+        //cursor: pointer;
+        &:hover {
+          animation: hover-zoom 1s forwards;
+        }
+      }
+    }
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-exhibitions);
+      margin: 20px 0;
+      line-height: 1;
+    }
+    &-data {
+      color: var(--color-exhibitions-sub-title);
+      margin-bottom: 15px;
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1;
+    }
+    &-text {
+      line-height: 1.5;
+      color: var(--color-exhibitions);
+    }
+  }
+}
+
+@keyframes hover-zoom {
+  0% {
+    transform: scale(1);
+    filter: grayscale(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+}

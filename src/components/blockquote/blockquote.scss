@@ -1,0 +1,26 @@
+blockquote {
+  width: 90%;
+  padding: 28px;
+  background: var(--main-color);
+  border-radius: 8px;
+  box-shadow: var(--background-color-slider-box-shadow);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-exhibitions-title);
+  text-align: center;
+  line-height: 1.6;
+  margin: 32px auto;
+  @media screen and (max-width: 1200px) {
+    font-size: calc(24px + 8 * ((100vw - 1200px) / (1200 - 320)));
+  }
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-exhibitions);
+  text-align: right;
+  font-style: italic;
+}

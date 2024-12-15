@@ -1,0 +1,8 @@
+mixin about(data)
+    .about
+        .about__container
+            .about__section
+                .about__title= data.about.aboutTitle
+            .about__section
+                each text in data.about.aboutText
+                    .about__text= text.text
